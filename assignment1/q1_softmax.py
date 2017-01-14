@@ -29,7 +29,7 @@ def softmax(x):
 
     x = x - np.max(x, axis=1, keepdims=True)
     x = np.exp(x)                       # N by d matrix 
-    exp_sums = np.sum(x, axis=1)        # N by 1 matrix
+    exp_sums = np.sum(x, axis=1, keepdims=True)        # N by 1 matrix
 
     return x / exp_sums
     

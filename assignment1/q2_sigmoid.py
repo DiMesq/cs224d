@@ -4,12 +4,7 @@ def sigmoid(x):
     """
     Compute the sigmoid function for the input here.
     """
-    
-    ### YOUR CODE HERE
-    raise NotImplementedError
-    ### END YOUR CODE
-    
-    return x
+    return 1 / (1 + np.exp(-x))
 
 def sigmoid_grad(f):
     """
@@ -19,11 +14,9 @@ def sigmoid_grad(f):
     """
     
     ### YOUR CODE HERE
-    raise NotImplementedError
+    return f * (1 - f)
     ### END YOUR CODE
     
-    return f
-
 def test_sigmoid_basic():
     """
     Some simple tests to get you started. 
@@ -50,7 +43,7 @@ def test_sigmoid():
     """
     print "Running your tests..."
     ### YOUR CODE HERE
-    raise NotImplementedError
+    #raise NotImplementedError
     ### END YOUR CODE
 
 if __name__ == "__main__":

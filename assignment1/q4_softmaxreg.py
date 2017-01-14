@@ -20,13 +20,7 @@ def getSentenceFeature(tokens, wordVectors, sentence):
     # Output:                                                         
     # - sentVector: feature vector for the sentence    
     
-    sentVector = np.zeros((wordVectors.shape[1],))
-    
-    ### YOUR CODE HERE
-    raise NotImplementedError
-    ### END YOUR CODE
-    
-    return sentVector
+    return np.sum(wordVectors[tokens[word]] for word in sentence) / len(sentence)
 
 def softmaxRegression(features, labels, weights, regularization = 0.0, nopredictions = False):
     """ Softmax Regression """
